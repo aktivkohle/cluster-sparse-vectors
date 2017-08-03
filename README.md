@@ -85,7 +85,7 @@ The ten clusters a numbered 0 to 9.
 * Cluster 8 might be 'healthy alternative' cooking
 * Cluster 9 sounds like a high level videos about machine learning
 
-Yes, there are other clustering algorithms than KMeans eg DBSCAN. In [the notebook](/https://github.com/aktivkohle/cluster-sparse-vectors/blob/master/Cluster_Sparse_Vectors.ipynb) there is a bit more discussion about numbers of clusters, as well as the code which produced this.
+Yes, there are other clustering algorithms than KMeans eg DBSCAN. In [the notebook](Cluster_Sparse_Vectors.ipynb) there is a bit more discussion about numbers of clusters, as well as the code which produced this.
 
 One thing I observe is that no matter whether the current algorithm is run with 5, 8, 10 or 20 clusters it never seems to find the small cluster of cat videos. There are not many compared to dog training, data science, cooking etc. I think if you gave KMeans a fixed starting point rather than let it randomly choose its starting point it might find such a cluster. Will think about how to do that, at any rate, given there are 429429 dimensions in each of these sparse vectors, it's not something you can tell just by plotting it which you can do when there are 3 dimensions.
 
