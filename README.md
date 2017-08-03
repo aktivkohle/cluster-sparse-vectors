@@ -89,7 +89,8 @@ Yes, there are other clustering algorithms than KMeans eg DBSCAN. In [the notebo
 
 One thing I observe is that no matter whether the current algorithm is run with 5, 8, 10 or 20 clusters it never seems to find the small cluster of cat videos. There are not many compared to dog training, data science, cooking etc. I think if you gave KMeans a fixed starting point rather than let it randomly choose its starting point it might find such a cluster. Will think about how to do that, at any rate, given there are 429429 dimensions in each of these sparse vectors, it's not something you can tell just by plotting it which you can do when there are 3 dimensions.
 
-Without any further ado, the samples of ten from each cluster found:
+Without any further ado, here are the samples of ten from each cluster found:
+
 
 
 <table border="1" class="dataframe">
