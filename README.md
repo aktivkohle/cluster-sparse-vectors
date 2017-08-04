@@ -1,10 +1,10 @@
-# Test a clustering algorithm on my youtube captions dataset
+## Test a clustering algorithm on my youtube captions dataset
 
 So as I filled the database up myself, choosing the API queries, there was never any need to cluster anything as I know what is in there. These algorithms are more useful when you suspect but don't know what the clusters are. Nevertheless I thought it wouldn't hurt to see how well the algorithm(s) perform. The data is ready to go, there was not much processing or cleaning needed. 
 
 Especially impressive was that **sklearn.cluster.KMeans** managed to work without me having to do anything to the SciPy COO sparse matrix! I checked the sklearn source code and you can see for example in [this line](https://github.com/scikit-learn/scikit-learn/blob/ab93d65/sklearn/cluster/k_means_.py#L1078) that they've built in some code to handle that so it wasn't magic.
 
-So I tried 5,8,10 and 20 clusters, really 10 was about as good as it got. When you have a look at the results in the table at the bottom you will see it has not performed perfectly, but it has nevertheless seperated out some of the main groups. 
+So I tried 5,8,10 and 20 clusters, really 10 was about as good as it got. When you have a look at the results in the table at the bottom you will see it has not performed perfectly, but it has nevertheless seperated out most of the main groups. 
 
 The number of videos found in each cluster is as follows:
 
@@ -63,7 +63,7 @@ The number of videos found in each cluster is as follows:
   </tbody>
 </table>
 
-The following interesting bit of code from [stackoverflow](https://stackoverflow.com/questions/22472213/python-random-selection-per-group) selects ten randomly from each group so we can read the titles or watch them if desired:
+The following interesting bit of code adapted from [stackoverflow](https://stackoverflow.com/questions/22472213/python-random-selection-per-group) selects ten randomly from each group so we can read the titles or watch them if desired:
 
 ```python
 size = 10        # sample size
@@ -73,9 +73,9 @@ clustered_sample = videos_df.groupby('cluster_labels', as_index=False).apply(fn)
 clustered_sample[['videoTitle','cluster_labels', 'link']]
 ```
 
-The ten clusters a numbered 0 to 9. 
-* Cluster 0 seems to be a 'data science' cluster but mainly general topics. 
-* Cluster 1 at the moment seems to be a mess of different topics. 
+The ten clusters are numbered 0 to 9. 
+* Cluster 0 seems to be a data science cluster but mainly around general topics. 
+* Cluster 1 seems to be a mess of different topics. 
 * Cluster 2 is mostly about cooking, possibly the more infotainment kind of videos. 
 * Cluster 3 is about machine learning and very detailed technical topics. 
 * Cluster 4 sounds like cooking family recipes and cakes. 
