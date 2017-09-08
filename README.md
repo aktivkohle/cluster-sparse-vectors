@@ -8,7 +8,7 @@ So I tried 5,8,10 and 20 clusters, really 10 was about as good as it got. When y
 
 The number of videos found in each cluster is as follows:
 
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
