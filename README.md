@@ -8,6 +8,7 @@ The first time I tried to cluster these vectors with KMeans, it found some clust
 
 Due to this error message:
 > TypeError: PCA does not support sparse input. See TruncatedSVD for a possible alternative.
+
 It was necessary to use TruncatedSVD intead of PCA for dimensionality reduction.
 
 The clustering with preprocessing will soon be in this repo for now at the bottom of [this notebook](clustering_without_preprocessing.ipynb) are the results of the original clustering with just KMeans. 
