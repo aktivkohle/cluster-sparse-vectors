@@ -1,6 +1,6 @@
-## Clustering the Videos from their Caption Vectors
+# Clustering the Videos from their Caption Vectors
 
-# Preprocessing was needed.
+## Preprocessing was needed.
 
 The sparse vectors pulled out of the youtube database are created only from the scripts or subtitles of the video, not the titles or anything else.
 
