@@ -13,3 +13,5 @@ It was necessary to use TruncatedSVD intead of PCA for dimensionality reduction.
 
 The clustering with preprocessing will soon be in this repo for now at the bottom of [this notebook](clustering_without_preprocessing.ipynb) are the results of the original clustering with just KMeans. 
 
+Just added [this notebook](kmeans_pipeline.ipynb) which details the pipeline with dimensionality reduction and normalisation. More discussion to come.  
+
